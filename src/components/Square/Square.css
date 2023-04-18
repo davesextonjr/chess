@@ -1,7 +1,16 @@
+.square{
+    display: grid;
+    place-content: center;
+}
+
 .dark-square{
     background-color: gray;
 }
 
 .light-square{
     background-color: bisque;
+}
+
+.piece {
+    height: 70px;
 }
