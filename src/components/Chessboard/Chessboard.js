@@ -1,9 +1,10 @@
 import Square from '../Square/Square'
+import { horizontalAxis, verticalAxis } from '../../utilities/squareNaming'
+import { fenToSquares } from '../../utilities/chessPieces'
 import './Chessboard.css'
+import { openingPosition } from '../../utilities/openingPosition'
 
 export default function Chessboard(){
-    const horizontalAxis = ["a", "b", "c", "d", "e", "f", "g", "h"]
-    const verticalAxis = ['8', '7', '6', '5', '4', '3', '2', '1']
     const board = []
 
     //combine the arrays to make the chess board
@@ -19,7 +20,8 @@ export default function Chessboard(){
             board.push(<Square color={color} name={name}/>)
         }
     }
-
+    const position = fenToSquares("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR")
+    console.log(position)
     return (
     <div id='chessboard'>
         {board}
