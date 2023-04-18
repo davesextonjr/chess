@@ -6,6 +6,7 @@ import { openingPosition } from '../../utilities/openingPosition'
 
 export default function Chessboard(){
     const board = []
+    const position = fenToSquares("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR")
 
     //combine the arrays to make the chess board
     for(let i = 0; i < verticalAxis.length; i++){
@@ -17,10 +18,9 @@ export default function Chessboard(){
             const name = horizontalAxis[j] + verticalAxis[i]
 
             //add each square to the board with its color and name
-            board.push(<Square color={color} name={name}/>)
+            board.push(<Square color={color} name={name} pieceImage={position[name] ? position[name]["src"] : undefined}/>)
         }
     }
-    const position = fenToSquares("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR")
     console.log(position)
     return (
     <div id='chessboard'>
