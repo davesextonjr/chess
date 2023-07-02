@@ -1,4 +1,4 @@
-export class Rook {
+export class Queen {
     constructor(square){
         this.square = square
         this.moved = false

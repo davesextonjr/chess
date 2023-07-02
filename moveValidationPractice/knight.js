@@ -1,4 +1,4 @@
-class Knight {
+export class Knight {
     constructor(square){
         this.square = square
         this.moved = false
