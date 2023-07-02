@@ -1,4 +1,4 @@
-class Pawn {
+class Rook {
     constructor(square){
         this.square = square
         this.moved = false
